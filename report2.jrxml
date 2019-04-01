@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="101dc2da-39a4-46aa-a574-bc48c61e9813">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     app.`aid` AS app_aid,
+     app.`aname` AS app_aname
+FROM
+     `app` app]]>
+	</queryString>
+	<field name="app_aid" class="java.lang.Integer"/>
+	<field name="app_aname" class="java.lang.String"/>
+	<group name="app_aid">
+		<groupExpression><![CDATA[$F{app_aid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="64" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="36" width="100" height="20" uuid="5b45946b-d5cb-4982-8044-137c10f5722e"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="301" y="36" width="100" height="20" uuid="182ef159-2f74-4844-8b4f-8413fb60ac94"/>
+				<textFieldExpression><![CDATA[$F{app_aid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="159" y="75" width="100" height="20" uuid="d5bf1537-1a56-4745-8ac4-1504dee74202"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="316" y="80" width="100" height="20" uuid="40415722-cc9c-4b68-a174-6e36f331a262"/>
+				<textFieldExpression><![CDATA[$F{app_aname}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="82" y="15" width="374" height="99" backcolor="#FF00FF" uuid="f3d5c111-c53d-4d67-bfad-096ccdc390a8"/>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
